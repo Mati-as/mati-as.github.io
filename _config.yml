@@ -15,7 +15,7 @@
 minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise" 
 
 # Site Settings
-author_profile           : true
+
 locale                   : "en-US"
 title                    : "newWaveDog_GameDevelopment"
 title_separator          : "-"
@@ -258,9 +258,9 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
+jekyll-archives:
+   enabled:
+     - categories
 #     - tags
 #   layouts:
 #     category: archive-taxonomy
