@@ -110,6 +110,13 @@ author:
   bio              : "I am an **amazing** person."
   location         : "Somewhere"
   email            :
+  sidebar:
+  - title: "Computer Graphics"
+    image: http://placehold.it/350x250
+    image_alt: "image"
+    text: "from gpu to graphics language"
+  - title: "Unity"
+    text: "make it unreal with the unity"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
