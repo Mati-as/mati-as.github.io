@@ -1,10 +1,10 @@
 ---
 layout: single
-title:  "PaintableTextur"
+title:  "PaintableTexture"
 ---
-![image](https://github.com/Mati-as/mati-as.github.io/assets/120005151/b704f4f9-1548-415f-bfba-e89bd407c84e)
-![image](https://github.com/Mati-as/mati-as.github.io/assets/120005151/cb129577-9a3e-444f-8528-1886c7b49328)
-![image](https://github.com/Mati-as/mati-as.github.io/assets/120005151/d216b5a6-4b6e-44f3-ba97-9348224ed916)
+<img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/b704f4f9-1548-415f-bfba-e89bd407c84e" width="100" height="100">
+<img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/cb129577-9a3e-444f-8528-1886c7b49328" width="100" height="100">
+<img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/d216b5a6-4b6e-44f3-ba97-9348224ed916" width="100" height="100">
 
 
 ### Shdaer Code 
