@@ -18,12 +18,10 @@ Shader "Custom/PaintShader"
         _Color ("Color", Color) = (1,1,1,1)
         _BrushColor ("Brush Color", Color) = (0,0,0,0)
         _BrushTex ("Brush Texture", 2D) = "white" {}
-      
     }
     SubShader
     {
        Tags{"RenderPipeline"= "UniversalPipeline"  "RenderType"= "Transparent" "RenderQueue" = "Transparent"}
-        
         LOD 100
         Pass
         {
@@ -62,17 +60,14 @@ Shader "Custom/PaintShader"
 
             fixed4 frag (v2f i) : SV_Target
             {
-               fixed4 col = tex2D(_MainTex, i.uv);
-            float2 brushUV = (i.uv - _MouseUV.xy) / _BrushSize + 0.5; // 중심을 기준으로 정규화
-            fixed4 brushCol = tex2D(_BrushTex, brushUV); // 질감 색상과 알파를 포함하여 샘플링
+            fixed4 col = tex2D(_MainTex, i.uv);
+            float2 brushUV = (i.uv - _MouseUV.xy) / _BrushSize + 0.5; // Normalization
+            fixed4 brushCol = tex2D(_BrushTex, brushUV)
 
-            // 질감의 세밀한 표현을 위해 가능한 고해상도 텍스처 사용
-            float brushAlpha = brushCol.a; // 질감의 알파 값 사용
-
-            // 마우스 클릭 지점 근처의 픽셀에만 질감 적용
+            
+            float brushAlpha = brushCol.a;
             if (distance(i.uv, _MouseUV.xy) < _BrushSize)
             {
-                // 질감의 색상과 기존 색상을 혼합
                 //col.rgb = lerp(col.rgb, brushCol.rgb, brushAlpha * _BrushStrength);
                 col.a = lerp(col.a, brushCol.a, brushAlpha * _BrushStrength);
             }
@@ -84,22 +79,6 @@ Shader "Custom/PaintShader"
                 }
     }
    
-   
-   
-  
 }
- // fixed4 col = tex2D(_MainTex, i.uv);
-                // float dist = distance(i.uv, _MouseUV.xy);
-                //  // 브러시 텍스처의 UV 좌표 계산
-                // float2 brushUV = (i.uv - _MouseUV.xy) / _BrushSize;
-                // // 브러시 텍스처 샘플링
-                // float brushAlpha = tex2D(_BrushTex, brushUV).a;
-                //
-                // if (dist < _BrushSize)
-                // {
-                //     float alpha = brushAlpha * _BrushStrength;
-                //     col.a = lerp(col.a, 0, alpha);
-                // }
-                //
-                // return col;
+               
 ```
