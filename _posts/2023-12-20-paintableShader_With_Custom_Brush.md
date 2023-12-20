@@ -5,7 +5,7 @@ title:  "PaintableTexture With Custom Brush Texture"
 <img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/c7ee7ba9-856f-4061-9263-c12d21f7187f" width="500" height="500">
 <img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/2553ad18-d8f2-46c0-8c20-a89f20db3da4" width="500" height="500">
 <img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/809002d9-9513-4644-bdd6-af493b59c6cd" width="500" height="500">
-<img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/728ea637-5754-4ba5-800c-1342328d3621" width="500" height="500">
+<img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/602bf25d-61b1-47d8-a58f-dc715a66754e" width="500" height="500">
 
 
 ```
