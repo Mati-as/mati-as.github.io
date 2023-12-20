@@ -84,3 +84,100 @@ Shader "Custom/PaintShader"
 }
                
 ```
+
+## Debugged Tiling Error 
+```
+Shader "Custom/PaintShader"
+{
+  Properties
+    {
+        _MainTex ("Texture", 2D) = "white" {}
+        _MouseUV ("Mouse UV", Vector) = (-1,-1,0,0)
+        _BrushSize ("Brush Size", Float) = 0.1
+        _BrushStrength ("Brush Strength", Float) = 0
+        _Color ("Color", Color) = (1,1,1,1)
+        _BrushColor ("Brush Color", Color) = (0,0,0,0)
+        _BrushTex ("Brush Texture", 2D) = "white" {}
+        _BrushTexTilingOffset ("Brush Tex Tiling and Offset", Vector) = (1,1,0,0)
+      
+    }
+    SubShader
+    {
+       Tags{"RenderPipeline"= "UniversalPipeline"  "RenderType"= "Transparent" "RenderQueue" = "Transparent"}
+        
+        LOD 100
+        Pass
+        {
+            Blend SrcAlpha OneMinusSrcAlpha
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
+            };
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                float4 vertex : SV_POSITION;
+            };
+
+              
+    
+            float4 _MouseUV;
+            float _BrushStrength;
+            sampler2D _MainTex;
+            sampler2D _BrushTex;
+            float _BrushSize;
+            float4 _Color;
+            float4 _BrushColor;
+            float4 _BrushTexTilingOffset;
+            
+            
+           
+            v2f vert (appdata v)
+            {
+                v2f o;
+                o.uv = v.uv;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+
+               fixed4 col = tex2D(_MainTex, i.uv);
+                float2 brushUV = (i.uv - _MouseUV.xy) / _BrushSize + 0.5; // 중심을 기준으로 정규화
+                            // 타일링 방지를 위해 clamp 적용
+                brushUV = clamp(brushUV, 0.0, 1.0);
+
+                // 텍스처 바깥 UV는 브러시 텍스처를 적용하지 않음
+                if (brushUV.x == 0.0 || brushUV.x == 1.0 || brushUV.y == 0.0 || brushUV.y == 1.0)
+                {
+                    return col;
+    }
+                fixed4 brushCol = tex2D(_BrushTex, brushUV); // 질감 색상과 알파를 포함하여 샘플링
+
+                // 질감의 세밀한 표현을 위해 가능한 고해상도 텍스처 사용
+                float brushAlpha = brushCol.a; // 질감의 알파 값 사용
+
+                // 마우스 클릭 지점 근처의 픽셀에만 질감 적용
+                if (distance(i.uv, _MouseUV.xy) < _BrushSize)
+                {
+                    // 질감의 색상과 기존 색상을 혼합
+                    //col.rgb = lerp(col.rgb, brushCol.rgb, brushAlpha * _BrushStrength);
+                    col.a = lerp(col.a, 0, brushAlpha * _BrushStrength);
+                }
+
+                return col;
+            }
+            ENDCG
+        }
+    }
+}
+```
+
