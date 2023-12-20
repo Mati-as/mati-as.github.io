@@ -108,8 +108,8 @@ author:
   name             : "Mati"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  location         : "Seoul"
+  email            : gongminseok505@gmail.com
   sidebar:
   - title: "Computer Graphics"
     image: http://placehold.it/350x250
