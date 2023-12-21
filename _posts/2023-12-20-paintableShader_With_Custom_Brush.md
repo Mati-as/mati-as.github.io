@@ -70,6 +70,7 @@ Shader "Custom/PaintShader"
             float brushAlpha = brushCol.a;
             if (distance(i.uv, _MouseUV.xy) < _BrushSize)
             {
+                //this(co.rgb) can be used when color needs changing.
                 //col.rgb = lerp(col.rgb, brushCol.rgb, brushAlpha * _BrushStrength);
                 col.a = lerp(col.a, brushCol.a, brushAlpha * _BrushStrength);
             }
@@ -85,7 +86,7 @@ Shader "Custom/PaintShader"
                
 ```
 
-## Debugged Tiling Error 
+## Debugged Tiling Error (12/20/23)
 ```
 Shader "Custom/PaintShader"
 {
@@ -151,25 +152,23 @@ Shader "Custom/PaintShader"
             {
 
                fixed4 col = tex2D(_MainTex, i.uv);
-                float2 brushUV = (i.uv - _MouseUV.xy) / _BrushSize + 0.5; // 중심을 기준으로 정규화
-                            // 타일링 방지를 위해 clamp 적용
+                float2 brushUV = (i.uv - _MouseUV.xy) / _BrushSize + 0.5;
+                          
                 brushUV = clamp(brushUV, 0.0, 1.0);
 
-                // 텍스처 바깥 UV는 브러시 텍스처를 적용하지 않음
+           
                 if (brushUV.x == 0.0 || brushUV.x == 1.0 || brushUV.y == 0.0 || brushUV.y == 1.0)
                 {
                     return col;
-    }
-                fixed4 brushCol = tex2D(_BrushTex, brushUV); // 질감 색상과 알파를 포함하여 샘플링
+                }
+                fixed4 brushCol = tex2D(_BrushTex, brushUV);
 
-                // 질감의 세밀한 표현을 위해 가능한 고해상도 텍스처 사용
-                float brushAlpha = brushCol.a; // 질감의 알파 값 사용
+             
+                float brushAlpha = brushCol.a;
 
-                // 마우스 클릭 지점 근처의 픽셀에만 질감 적용
+             
                 if (distance(i.uv, _MouseUV.xy) < _BrushSize)
                 {
-                    // 질감의 색상과 기존 색상을 혼합
-                    //col.rgb = lerp(col.rgb, brushCol.rgb, brushAlpha * _BrushStrength);
                     col.a = lerp(col.a, 0, brushAlpha * _BrushStrength);
                 }
 
