@@ -2,6 +2,7 @@
 layout: single
 title:  "PaintableTexture With Custom Brush Texture"
 categories: shader
+Tag: [Unity,HLSL]
 ---
 <img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/c7ee7ba9-856f-4061-9263-c12d21f7187f" width="500" height="500">
 <img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/2553ad18-d8f2-46c0-8c20-a89f20db3da4" width="500" height="500">
