@@ -105,8 +105,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "Mati"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name             : "Mati_Kong"
+  avatar           : images/mati.png"
   bio              : "I am an **amazing** person."
   location         : "Seoul"
   email            : gongminseok505@gmail.com
