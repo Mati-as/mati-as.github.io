@@ -17,8 +17,8 @@ let's say you should make a lot of bubbles,  **here are the requests from a game
 **let's tackle the first issue** .
 if you're not very familiar with difference between Shuriken's 's collider and normal collider(box,sphere collider.. **that are usually found in component option**) **you might turn on the collision checkbox of sheriken box and try to intergrate this function with a script.**
 
-![posts](2024-01-09-16-43-41.png)
 ![posts](2024-01-09-16-44-30.png)
+![posts](2024-01-09-16-43-41.png)
 **unfortunately, it's not feasiblle**. even though the shreiken's collision system looks similar to the standard collider component, **it's not straightforward to directly access to the API of shreiken's collision to get some parameters** (e.g. most of the time we get OnTriggerExit, OnTriggerEnter..and so like to get the timing to control.)
 
 
