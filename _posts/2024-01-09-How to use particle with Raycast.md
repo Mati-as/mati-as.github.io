@@ -25,6 +25,7 @@ if you're not very familiar with difference between Shuriken's 's collider and n
 
 maybe there are more efficient way to implement these fucntion, but i'd like to show you how i did it.
 
+
 <img src="/images/2024-01-09-16-45-08.png" width="500" height="500">
 
 Firstly, i made bubble particles and turned on the collision option in the Shuriken  editor. you can see in the picture i sandwitched it between colliders to limit the area where the bubbles can move. this is important because not only they look visually stable(**of course it can be changed based on game system design**) but also helps to control the particles. you are going to understand this when you see the **code below.** 
@@ -91,5 +92,6 @@ the code is quite simple, there only two methods. one is for removing the closes
 
 When you visualize this with a gizmo for debugging, it looks like this:
 
-![currentFileDir](2024-01-09-16-46-14.png)
+<img src="/images/2024-01-09-16-46-14.png" width="500" height="500">
+
 The blue line is the ray and the magenta sphere represents the position and the detectable range for user clicks on particles. When particles fall within the magenta sphere, they will be removed. **This function visually mimics what you would achieve if you created a similar system without a particle system, using just normal sphere GameObjects.**

@@ -5,7 +5,8 @@ categories: shader
 Tag: Unity
 ---
 
-### the detailed description of blend types:
+
+## the detailed description of blend types:
 
 - Traditional Transparency ("Blend SrcAlpha OneMinusSrcAlpha")
 

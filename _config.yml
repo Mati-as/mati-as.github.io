@@ -107,8 +107,8 @@ analytics:
 author:
   name             : "Mati_Kong"
   avatar           : "/images/mati.png"
-  bio              : "I am an **amazing** person."
-  location         : "Seoul"
+  bio              : "I am an **amazing** person, 세상에서 가장 멋진사람이 될거에요."
+  location         : "Seoul / South Korea"
   email            : gongminseok505@gmail.com
   sidebar:
   - title: "Computer Graphics"

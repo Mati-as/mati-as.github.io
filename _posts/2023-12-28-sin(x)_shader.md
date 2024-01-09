@@ -5,9 +5,10 @@ categories: shader
 Tag: [Unity, Shader]
 ---
 
-![Alt text](<Untitled video - Made with Clipchamp (2)-1.gif>)
 
 
+<img src="/images/image-2.png" width="500" height="500">
+<img src="/images/Untitled video - Made with Clipchamp (2).gif" width ="500" height ="500">
 ## using sine to move the vertex and frag
 
 ```
