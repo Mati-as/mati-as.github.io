@@ -18,14 +18,14 @@ let's say you should make a lot of bubbles,  **here are the requests from a game
 if you're not very familiar with difference between Shuriken's 's collider and normal collider(box,sphere collider.. **that are usually found in component option**) **you might turn on the collision checkbox of sheriken box and try to intergrate this function with a script.**
 
 
-<img src="2024-01-09-16-44-30.png" width="500" height="500">
-<img src="2024-01-09-16-43-41.png" width="500" height="500">
+<img src="2024-01-09-16-44-30" width="500" height="500">
+<img src="2024-01-09-16-43-41" width="500" height="500">
 **unfortunately, it's not feasiblle**. even though the shreiken's collision system looks similar to the standard collider component, **it's not straightforward to directly access to the API of shreiken's collision to get some parameters** (e.g. most of the time we get OnTriggerExit, OnTriggerEnter..and so like to get the timing to control.)
 
 
 maybe there are more efficient way to implement these fucntion, but i'd like to show you how i did it.
 
-<img src="2024-01-09-16-45-08.png" width="500" height="500">
+<img src="2024-01-09-16-45-08" width="500" height="500">
 
 Firstly, i made bubble particles and turned on the collision option in the Shuriken  editor. you can see in the picture i sandwitched it between colliders to limit the area where the bubbles can move. this is important because not only they look visually stable(**of course it can be changed based on game system design**) but also helps to control the particles. you are going to understand this when you see the **code below.** 
 
