@@ -106,7 +106,7 @@ analytics:
 # Site Author
 author:
   name             : "Mati_Kong"
-  avatar           : images/mati.png"
+  avatar           : "images/mati.png"
   bio              : "I am an **amazing** person."
   location         : "Seoul"
   email            : gongminseok505@gmail.com
