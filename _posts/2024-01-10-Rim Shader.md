@@ -5,7 +5,7 @@ categories: "shader"
 Tag: [Unity, Vfx]
 ---
 
-<img src="Rim.png" width="500" height="500">
+<img src="/images/Rim.png" width="500" height="500">
 
 ```Shader "Custom/RimShader"
 {
