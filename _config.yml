@@ -107,9 +107,9 @@ analytics:
 author:
   name             : "Mati_Kong"
   avatar           : "/images/mati.png"
-  bio              : "I am an **amazing** person, 세상에서 가장 멋진사람이 될거에요."
+  bio              : "I am an **amazing** person, \n 세상에서 가장 멋진사람이 될거에요."
   location         : "Seoul / South Korea"
-  email            : gongminseok505@gmail.com
+
   sidebar:
   - title: "Computer Graphics"
     image: http://placehold.it/350x250
@@ -120,22 +120,25 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "mailto:gongminseok505@gmail.com"
+    - #label: "Website"
+      #icon: "fas fa-fw fa-link"
+      #url: "https://your-website.com"
+    - #label: "Twitter"
+      #icon: "fab fa-fw fa-twitter-square"
+      #url: "https://twitter.com/"
+    - #label: "Facebook"
+      #icon: "fab fa-fw fa-facebook-square"
+      #url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://www.instagram.com/mati_techart/?next=%2Fgoldilockser.com%2F"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://youtube.com/"
 
 # Site Footer
 footer:
