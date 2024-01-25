@@ -3,6 +3,7 @@ layout: single
 title:  "Rim Shader"
 categories: "shader"
 Tag: [Unity, Vfx]
+toc: true
 ---
 
 <img src="/images/Rim.png" width="500" height="500">

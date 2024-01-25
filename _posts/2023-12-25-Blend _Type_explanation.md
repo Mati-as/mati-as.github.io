@@ -3,6 +3,7 @@ layout: single
 title:  "blend type Explanation"
 categories: shader
 Tag: Unity
+toc: true
 ---
 
 
