@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Rim Shader"
+title:  "About LINQ"
 categories: "shader"
 Tag: [C#]
 toc: true
