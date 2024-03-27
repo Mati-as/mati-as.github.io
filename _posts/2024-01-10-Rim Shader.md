@@ -2,8 +2,10 @@
 layout: single
 title:  "Rim Shader"
 categories: "shader"
-Tag: [Unity, Vfx]
+tag: [Unity, HLSL]
 toc: true
+sidebar:
+    nav: "counts"
 ---
 
 <img src="/images/Rim.png" width="500" height="500">

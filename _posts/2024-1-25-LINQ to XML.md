@@ -2,8 +2,10 @@
 layout: single
 title:  "About LINQ"
 categories: "shader"
-Tag: [C#]
+tag: [C#]
 toc: true
+sidebar:
+    nav: "counts"
 ---
 
 

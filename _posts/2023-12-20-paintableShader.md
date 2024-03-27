@@ -2,8 +2,10 @@
 layout: single
 title:  "PaintableTexture"
 categories: shader
-Tag: Unity
+tag: Unity
 toc: true
+sidebar:
+    nav: "counts"
 ---
 <img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/b704f4f9-1548-415f-bfba-e89bd407c84e" width="500" height="500">
 <img src="https://github.com/Mati-as/mati-as.github.io/assets/120005151/cb129577-9a3e-444f-8528-1886c7b49328" width="500" height="500">

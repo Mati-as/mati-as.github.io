@@ -2,8 +2,10 @@
 layout: single
 title:  "blend type Explanation"
 categories: shader
-Tag: Unity
+tag: Unity
 toc: true
+sidebar:
+    nav: "counts"
 ---
 
 

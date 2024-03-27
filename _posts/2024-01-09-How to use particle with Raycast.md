@@ -2,8 +2,10 @@
 layout: single
 title:  "How to use particle with Raycast"
 categories: "Unity Tips"
-Tag: [Unity, Vfx]
+tag: [Unity, VFX]
 toc: true
+sidebar:
+    nav: "counts"
 ---
 
 Have you ever tired to use particle system as a collider?

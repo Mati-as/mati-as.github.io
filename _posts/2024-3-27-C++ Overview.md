@@ -2,8 +2,10 @@
 layout: single
 title:  "Diving Into Modern C++"
 categories: "C++"
-Tag: [C++]
+tag: [C++]
 toc: true
+sidebar:
+    nav: "counts"
 ---
 
 -Disclaimer:  This post is about Personal Study Journey. The following post is a casual dive into the world of Modern C++ programming,
