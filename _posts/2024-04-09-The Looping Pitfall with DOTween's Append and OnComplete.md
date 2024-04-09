@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "The Looping Pitfall with DOTween's Append and OnComplete"
-categories: "Unity Tips"
+categories: "Unity"
 Tag: [Unity, Animation, DOTween]
 toc: true
 ---
