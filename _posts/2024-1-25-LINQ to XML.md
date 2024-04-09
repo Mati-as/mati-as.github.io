@@ -1,9 +1,11 @@
 ---
 layout: single
-title:  "Rim Shader"
+title:  "About LINQ"
 categories: "shader"
-Tag: [C#]
+tag: [C#]
 toc: true
+sidebar:
+    nav: "counts"
 ---
 
 

@@ -2,8 +2,10 @@
 layout: single
 title:  "Sin(x)_shader"
 categories: shader
-Tag: [Unity, Shader]
+tag: [Unity, Shader]
 toc: true
+sidebar:
+    nav: "counts"
 ---
 
 
