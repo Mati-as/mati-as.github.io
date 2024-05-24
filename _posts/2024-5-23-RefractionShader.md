@@ -17,6 +17,7 @@ When working with Unity, optimizing performance without sacrificing visual quali
 Enabling this setting can have a performance impact, but in many cases, the benefits in terms of visual effects outweigh the cost, especially if you're targeting high-end devices or platforms.
 
 
-<img src="/images/distortion.png" width="300" height="1000">
+<img src="/images/ShaderGraph_Refraction.png" width="1000" height="350">
 
-In this graph, we sample the opaque texture and apply a distortion effect based on a noise texture. This creates a dynamic visual effect that uses the underlying scene texture for refraction.
+In this graph Below, we sample the opaque texture and apply a distortion effect based on a noise texture. This creates a dynamic visual effect that uses the underlying scene texture for refraction.
+![alt text](image-1.png)
