@@ -14,10 +14,12 @@ sidebar:
 ### Enabling Opaque Texture in Unity's Performant Settings
 When working with Unity, optimizing performance without sacrificing visual quality is a crucial balance to strike. One key setting that can help in this regard is enabling the opaque texture in Unity's performant settings. In this blog post, I'll walk you through why this setting is important and how to use it effectively, along with some shader graph examples.
 
+
+<img src="/images/distortion.png" width="1000" height="350">
+
 Enabling this setting can have a performance impact, but in many cases, the benefits in terms of visual effects outweigh the cost, especially if you're targeting high-end devices or platforms.
 
 
 <img src="/images/ShaderGraph_Refraction.png" width="1000" height="350">
 
 In this graph Below, we sample the opaque texture and apply a distortion effect based on a noise texture. This creates a dynamic visual effect that uses the underlying scene texture for refraction.
-![alt text](image-1.png)
