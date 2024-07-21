@@ -1,0 +1,128 @@
+---
+layout: single
+title:  "ReadWriteLock"
+categories: "Network"
+Tag: [Network]
+toc: true
+---
+
+using System;
+using System.Reflection.PortableExecutable;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ServerCore
+{
+
+    /// <summary>
+    /// 1.1. 재귀락 비허용
+    /// 1.2. spin lock policy (5000 -> yield)
+    ///
+    /// 2.1 recursive permission YES : WriteLock -> WriteLock, WriteLock -> ReadLock But ReadLock -> WriteLock is impossible and doesn't make sense
+    ///
+    /// </summary>
+    class Lock //ReadWriterLock Implementation
+    { 
+         const int EMPTY_FLAG = 0x00000000;
+         const int WRITE_MASK = 0x7FFF0000;
+         const int READ_MASK = 0x0000FFFF;
+         const int MAX_SPIN_COUNT = 5000;
+
+        // if WriteThreadID is boolean, tracking current thread use is impossible. 
+            // it means when recursive call is not used. it can be boolean. 
+        // [Unused(1) [WriteThreadId(15)] [ReadCount(16)]
+        private int _flag;
+        private int writeCount = 0; // it dosen't need to be included in flag. it's not exclusive. 
+
+        public void WriteLock()
+        {
+
+            // 동일 쓰레드가  WriteLock을 이미  획득하고 있는지 확인
+            int lockThreadId = (_flag & WRITE_MASK) >> 16;
+            if (Thread.CurrentThread.ManagedThreadId == lockThreadId)
+            {
+                writeCount++;
+                return;
+
+            }
+            // nobody requires WriteLock or Readlock -> get ownership by competition.
+           
+            while (true)
+            {
+                int desired = (Thread.CurrentThread.ManagedThreadId << 16) & WRITE_MASK; 
+                for (int i = 0; i< MAX_SPIN_COUNT;i++)
+                {
+                    if (Interlocked.CompareExchange(ref _flag, desired, EMPTY_FLAG) == EMPTY_FLAG)
+                    {
+                        writeCount= 1;
+                        return;
+                    } // combine the two lines below together
+                }
+
+                    //return when it's successful
+                    //if (_flag == EMPTY_FLAG) // when it's empty, put what user desires
+                    //    _flag = desired; //but this process is seperated. so it doesn't work!  so it has to be chamged to interlocked functions 
+
+                
+
+                Thread.Yield();
+            }
+        }
+
+        public void WriteUnlock()
+        {
+            
+            int lockCount = --writeCount;
+            if(lockCount ==0) Interlocked.Exchange(ref _flag, EMPTY_FLAG);
+
+        }
+
+        public void ReadLock()
+        {
+
+            // 동일 쓰레드가  WriteLock을 이미  획득하고 있는지 확인
+            int lockThreadId = (_flag & WRITE_MASK) >> 16;
+            if (Thread.CurrentThread.ManagedThreadId == lockThreadId)
+            {
+                Interlocked.Increment(ref _flag);
+                return;
+
+            }
+
+            // nobody's requring WriteLock, Readcount ++ 
+            while (true)
+            {
+                for (int i = 0; i < MAX_SPIN_COUNT; i++)
+                {
+                    // if it's not 0, another thread's already taken 
+                    // e.g. treadA(0), threadB(0) -> flag:1 but B can't satisfy the condition  
+                    int expected = (_flag & READ_MASK);
+                    if (Interlocked.CompareExchange(ref _flag, expected + 1, expected) == expected)
+                        return;
+
+                    // the same issue happens!
+                    //if ((_flag & WRITE_MASK) == 0) // nobdy's requiring WriteLock
+                    //{
+                    //    _flag += 1;
+                    //    return;
+                    //}
+                }
+                Thread.Yield();
+            }
+        }
+
+        public void ReadUnlock()
+        {
+            Interlocked.Decrement(ref _flag);
+        }
+
+    }
+
+
+        class Program
+        {
+
+        }
+
+    }
+
