@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "aqua" #"neon"  "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise" 
+minimal_mistakes_skin    : "sunrise" #"neon"  "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise" 
 
 # Site Settings
 
@@ -106,7 +106,7 @@ analytics:
 # Site Author
 author:
   name             : "Mati_Kong"
-  avatar           : "/images/mati.png"
+  avatar           : "/images/Profile.png"
   bio              : "I am an **amazing** person, \n 세상에서 가장 멋진사람이 될거에요."
   location         : "Seoul / South Korea"
 
