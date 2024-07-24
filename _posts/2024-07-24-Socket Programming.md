@@ -5,18 +5,11 @@ categories: "Network"
 Tag: [Network]
 toc: true
 ---
-
-here's a general code explanation to include above your code:
-
----
-
 ### General Overview of Socket Programming Example
-
 This example demonstrates a basic implementation of a TCP server and client using C# and the `System.Net.Sockets` namespace. Socket programming enables communication between two nodes on a network, and this example showcases how to create a server that listens for incoming connections and a client that connects to the server, exchanges messages, and then closes the connection.
 
 ### Server Code Explanation
-
-The server code initializes a socket to listen for incoming TCP connections. It binds the socket to an endpoint (defined by an IP address and port), starts listening for connections, and handles client requests in a loop. The server receives a message from the client, sends a response, and then closes the connection.
+The server code initializes a socket to listen for incoming TCP connections. It binds the socket to an endpoint (defined by an IP address and port), starts listening for connections, and handles client requests in a loop. The server receives a message from the client, sends a response, and th n closes the connection.
 
 1. **Namespace and Class Setup**: `namespace Servercore` and `class Program` define the scope and main class.
 2. **DNS and IP Resolution**:
