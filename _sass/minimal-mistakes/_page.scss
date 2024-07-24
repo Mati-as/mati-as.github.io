@@ -98,7 +98,7 @@
 			position: relative;
 			left: 0.5em;
 			opacity: 0;
-			font-size: 0.8em;
+			font-size: 0.7em;
 			-webkit-transition: opacity 0.2s ease-in-out 0.1s;
 			-moz-transition: opacity 0.2s ease-in-out 0.1s;
 			-o-transition: opacity 0.2s ease-in-out 0.1s;
@@ -139,19 +139,30 @@
     }
   }
 
-  :not(pre) > code {
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
-    font-size: 0.15em;
-    background: $code-background-color;
-    border-radius: $border-radius;
+  /* style for code blocks */
+pre,
+code {
+  font-size: 0.8em; /* increase the font size */
+  background-color: #5f175c; /* set a light grey background color */
+  color: #d5c3c3; /* set the text color */
+  border: 0px solid #fff700; /* add a border */
+  padding: 0px; /* add padding */
+  border-radius: 0px; /* add rounded corners */
+}
 
-    &::before,
-    &::after {
-      letter-spacing: -0.2em;
-      content: "\00a0"; /* non-breaking space*/
-    }
-  }
+/* additional styling for pre elements */
+pre {
+  overflow: auto; /* ensure long code blocks are scrollable */
+}
+
+/* additional styling for inline code */
+:not(pre) > code {
+  padding: 0.2em 0.4em;
+  font-size: 0.7em; /* slightly smaller font size for inline code */
+  background-color: #95409b5d;
+  border: 0.5px solid #ddd;
+  border-radius: 1px;
+}
 
   dt {
     margin-top: 1em;
