@@ -2,33 +2,33 @@
    SINGLE PAGE/POST
    ========================================================================== */
 
-#main {
-  @include clearfix;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
-  -webkit-animation: $intro-transition;
-  animation: $intro-transition;
-  max-width: 100%;
-  -webkit-animation-delay: 0.15s;
-  animation-delay: 0.15s;
-
-  @include breakpoint($x-large) {
-    max-width: $max-width;
+   #main {
+    @include clearfix;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    -webkit-animation: $intro-transition;
+    animation: $intro-transition;
+    max-width: 100%;
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+  
+    @include breakpoint($x-large) {
+      max-width: $max-width;
+    }
   }
-}
-
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-          flex-direction: column;
-}
+  
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 5vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 
 .initial-content,
 .search-content {
@@ -38,18 +38,18 @@ body {
 .page {
   @include breakpoint($large) {
     float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
+    width: calc(100%);
+    padding-left: $right-sidebar-width-narrow;
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
+    width: calc(100%);
+    padding-left: $right-sidebar-width;
   }
 
   .page__inner-wrap {
     float: left;
-    margin-top: 1em;
+    margin-top: 0em;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
@@ -142,7 +142,7 @@ body {
   :not(pre) > code {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
-    font-size: 0.5em;
+    font-size: 0.15em;
     background: $code-background-color;
     border-radius: $border-radius;
 

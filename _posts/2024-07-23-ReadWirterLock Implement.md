@@ -10,7 +10,7 @@ toc: true
 This code provides an implementation of a read-write lock. It allows multiple readers or a single writer to access a resource, but not both. The implementation includes spin-locking and yielding to optimize performance. It supports recursive locking for write operations but not for read operations to write operations. The main program demonstrates a simple use case with a writer and a reader task.
 
 
-```C#
+```
 using System;
 using System.Threading;
 using System.Threading.Tasks;
