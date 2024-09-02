@@ -17,14 +17,14 @@ minimal_mistakes_skin    : "plum" #"neon", "air", "aqua", "contrast", "dark", "d
 # Site Settings
 
 locale                   : "en-US"
-title                    : "newWaveDog_GameDevelopment"
+title                    : "GameDevelopment Makes me Insane - newWaveDog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "mati kong"
 description              : ""
 url                      : "https://mati-as.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "https://github.com/Mati-as"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -37,7 +37,7 @@ comments:
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
-    # https://developers.facebook.com/docs/plugins/comments
+    # https://developers.facebook.com/docs/plugins/comments 
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
@@ -107,7 +107,7 @@ analytics:
 author:
   name             : "Mati_Kong"
   avatar           : "/images/Profile.png"
-  bio              : "I am an **amazing** person, \n 세상에서 가장 멋진사람이 될거에요."
+  bio              : "세상에서 가장 멋진사람 할거에요"
   location         : "Seoul / South Korea"
 
   sidebar:
